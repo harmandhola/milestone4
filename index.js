@@ -23,13 +23,7 @@ server.listen(PORT, function() {
   console.log('/patients')
 });
 
-server
-  // Allow the use of POST
-  .use(restify.fullResponse())
 
-    // Maps req.body to req.params so there is no switching between them
-    .use(restify.bodyParser())
-  
 // POST request
 //ADD patient 
 server.post('/patients', addNewPatient);

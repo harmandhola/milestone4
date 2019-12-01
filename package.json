@@ -1,0 +1,16 @@
+{
+  "name": "milestone4",
+  "version": "1.0.0",
+  "description": "patient-api",
+  "dependencies": {
+  "restify": "4.1.1",
+  "save": "2.3.0"
+
+  },
+  "author": "Harman dhola",
+"private": true,
+"main": "index.js",
+"scripts": {
+  "start": "node index.js"
+}
+}

@@ -1,7 +1,8 @@
-var SERVER_NAME = 'patient-api'
+var SERVER_NAME = 'user-api'
 var PORT = process.env.PORT;
 
-var restify = require('restify');
+
+var restify = require('restify')
 var errors = require('restify-errors');
 
 var save = require('save')
@@ -9,21 +10,18 @@ var save = require('save')
 var patientsSave = save('patient')
 var recordsSave = save('records')
 
+
   // Create the restify server
-  , server = restify.createServer({ name: SERVER_NAME})
+var server = restify.createServer({ name: SERVER_NAME})
 
-// configure request body parser
-server.use(restify.plugins.bodyParser({ mapParams: false }));
-
-server.listen(PORT, function () {
+  server.listen(PORT, function () {
   console.log('Server %s listening at %s', server.name, server.url)
   console.log('Resources:')
   console.log(' /patients')
   console.log(' /patients/:id')  
 })
 
-
-// POST request
+//POST request
 //ADD patient 
 server.post('/patients', addNewPatient);
 

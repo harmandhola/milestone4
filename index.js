@@ -91,7 +91,7 @@ function addNewPatient(req, res, next) {
         first_name: req.body.first_name, 
         last_name: req.body.last_name,
         address: req.body.address,
-        date_of_birth: req.body.dateOfBirth,
+        date_of_birth: req.body.date_of_birth,
         department: req.body.department,
         doctor: req.body.doctor
       }
